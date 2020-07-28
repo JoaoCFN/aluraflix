@@ -8,4 +8,4 @@ function ButtonLink(props){
     );
 }
 
-export default ButtonLink
+export default ButtonLink;
