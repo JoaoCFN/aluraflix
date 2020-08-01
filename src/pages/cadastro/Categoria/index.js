@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import PageDefault from '../../../components/PageRoot';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
+
 
 function CadastroCategoria(){
     const valoresInicias = {
@@ -68,9 +70,9 @@ function CadastroCategoria(){
                     onChange={handleChange}
                 />
 
-                <button>
+                <Button>
                     Cadastrar
-                </button>
+                </Button>
             </form>
 
             <ul>
