@@ -13,7 +13,6 @@ function Home() {
     useEffect(() => {
         categoriesRepository.getAllVideos()
         .then((categoriasComVideos) => {
-            console.log(categoriasComVideos)
             setDadosIniciais(categoriasComVideos);
         })
     }, [])

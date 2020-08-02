@@ -18,6 +18,7 @@ function useForm(valoresInicias){
     }
 
     function clearForm(){
+        console.log(valoresInicias)
         setValues(valoresInicias);
     }
 

@@ -8,11 +8,13 @@ import Button from '../../../components/Button';
 import videosRepostory from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categorias';
 
+
 function CadastroVideo(){
     const history = useHistory();
     const [categorias, setCategorias] = useState([]);
     const categoryTitles = categorias.map(({ titulo }) => titulo)
     const { handleChange, values } = useForm({});
+
 
     useEffect(() => {
         categoriesRepository.getAll()
