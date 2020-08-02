@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const FormFieldWrapper = styled.div`
     position: relative;
@@ -60,6 +60,14 @@ const Input = styled.input`
     &:focus:not([type='color']) + ${Label.Text} {
         transform: scale(.6) translateY(-10px);
     }
+
+    ${({ hasValue }) => {
+        return hasValue && css`
+           &:not([type='color']) + ${Label.Text} {
+                transform: scale(.6) translateY(-10px);
+           } 
+        `
+    }}
 `;
 
 const TextArea = styled.textarea`
@@ -89,31 +97,42 @@ const TextArea = styled.textarea`
     &:focus:not([type='color']) + ${Label.Text} {
         transform: scale(.6) translateY(-10px);
     }
+
+    ${({ hasValue }) => {
+        return hasValue && css`
+           &:not([type='color']) + ${Label.Text} {
+                transform: scale(.6) translateY(-10px);
+           } 
+        `
+    }}
 `;
 
-function FormField({ title, fieldType, type, name, onChange, }){
+function FormField({ title, fieldType, type, name, onChange, value }){
 
     const isTextArea = fieldType === 'textarea';
+    const hasValue = Boolean(value.length);
 
     return (
         <FormFieldWrapper>
             <Label>
-                <Label.Text>
-                    {title}: 
-                </Label.Text>
                 {isTextArea ? (
                     <TextArea 
                         type={type}
                         name={name}
                         onChange={onChange}
+                        hasValue={value}
                     />
                 ): (
                     <Input 
                         type={type}
                         name={name}
                         onChange={onChange}
+                        hasValue={value}
                     />       
                 )}
+                <Label.Text>
+                    {title}: 
+                </Label.Text>
             </Label>
         </FormFieldWrapper>
     );    
@@ -122,6 +141,7 @@ function FormField({ title, fieldType, type, name, onChange, }){
 FormField.defaultProps = {
     type: 'text',
     fieldType: 'input',
+    value: '',
     onChange: () => {}
 };
 
@@ -131,6 +151,7 @@ FormField.propTypes = {
     type: PropTypes.string, 
     name: PropTypes.string.isRequired, 
     onChange: PropTypes.func,
+    value: PropTypes.string
 };
 
 export default FormField;
