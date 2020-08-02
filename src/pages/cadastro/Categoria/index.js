@@ -41,7 +41,9 @@ function CadastroCategoria(){
     }
 
     useEffect(() => {
-        const URL = 'http://localhost:3333/categorias';
+        const URL = window.location.hostname.includes('localhost') 
+        ? 'http://localhost:3333/categorias'
+        : 'https://alura-flix-joaocfn.herokuapp.com/categorias';
         fetch(URL)
         .then(reponse =>  reponse.json())
         .then(data => {
