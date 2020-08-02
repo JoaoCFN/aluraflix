@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">Alura Flix</h2>
 
-## Available Scripts
+___
 
-In the project directory, you can run:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JoaoCFN/aluraflix/36cc9d804e6942fc43f9eab07598c25e9430873d/imersao-react-logo.svg?token=AN2VEXF7P6LVCC4DGKHRNBC7E5B6G" width="300" heigth="300">
+</p>
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
+  </a>
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+___
 
-### `yarn test`
+<h3 align="center">
+  <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
+  <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
+  <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
+  <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
+  <a href="#licença">Licença</a>
+</h3>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+___
 
-### `yarn build`
+<img src="https://github.com/JoaoCFN/aluraflix/blob/master/prints/print-home.jpg?raw=true" width="1200">
+<img src="https://github.com/JoaoCFN/aluraflix/blob/master/prints/print-videos.jpg?raw=true" width="1200">
+<img src="https://github.com/JoaoCFN/aluraflix/blob/master/prints/print-footer.jpg?raw=true" width="1200">
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :information_source: Sobre
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+O aluraflix é um projeto desenvolvido durante a Imersão React da Alura e serve como um agregador de vídeos personalizado.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :interrobang: Motivo
 
-### `yarn eject`
+Este projeto foi construido para praticar meus conhecimentos de React obtidos durante a semana da imersão.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :seedling: Requisitos Mínimos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NodeJS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :rocket: Tecnologias Utilizadas 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-## Learn More
+- React
+- Styled Components
+- JSON Server
+## ▶️ Executando
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### :star: Instale as dependências
+```
+$ npm install
+```
+#### :star: Inicie a aplicação web
+```
+$ npm run dev
+```
 
-### Code Splitting
+## Licença 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
