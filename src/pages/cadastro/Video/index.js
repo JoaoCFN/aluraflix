@@ -11,11 +11,8 @@ import categoriesRepository from '../../../repositories/categorias';
 function CadastroVideo(){
     const history = useHistory();
     const [categorias, setCategorias] = useState([]);
-    const { handleChange, values } = useForm({
-        // titulo: 'Vídeo padrão',
-        // url: 'https://www.youtube.com/watch?v=cMq6k7ymv2s',
-        // categoria: 'Front End'
-    });
+    const categoryTitles = categorias.map(({ titulo }) => titulo)
+    const { handleChange, values } = useForm({});
 
     useEffect(() => {
         categoriesRepository.getAll()
@@ -24,16 +21,12 @@ function CadastroVideo(){
         })
     }, []);
 
-    console.log(categorias)
-
     function handleSubmit(event){
         event.preventDefault();
 
         const categoriaEscolhida = categorias.find((categoria) => {
             return categoria.titulo === values.categoria;
         });
-
-        console.log('categoriaEscolhida', categoriaEscolhida);
 
         videosRepostory.create({
             titulo: values.titulo,
@@ -76,6 +69,7 @@ function CadastroVideo(){
                     name="categoria"
                     value={values.categoria}
                     onChange={handleChange}
+                    suggestions={categoryTitles}
                 />
 
                 <Button type="submit">
